@@ -17,18 +17,32 @@ def home_page():
     #     online_users=online_users)
     return str(dataArray)
 
+# -------------------- DELETES -------------------
+
 # Borra la base de datos
 @app.route("/delete")
 def delete():
-
     # database
     db = mongo.db
-    print("db")
 
-    # Created or Switched to collection names: my_gfg_collection
-    db.info.remove({ })
+    # Borra la base
+    deleteAllProblems(db)
+    deleteAllTips(db)
+    deleteAllMaterials(db)
 
     return "done"
+
+def deleteAllProblems(db):
+    db.problems.remove({ })
+    return
+
+def deleteAllTips(db):
+    db.tips.remove({ })
+    return
+
+def deleteAllMaterials(db):
+    db.materials.remove({ })
+    return
 
 # -------------------- INSERTS -------------------
 
@@ -41,8 +55,23 @@ def insert():
     insertAllProblems(db)
     insertAllTips(db)
     insertAllMaterials(db)
-    
-    return ""
+
+    return "done"
+
+@app.route("/insertextra")
+def insert():
+    # database
+    db = mongo.db
+
+    # Hace el insert del extra
+    insertExtraProblem(db)
+
+    return "done"
+
+def insertExtraProblem(db):
+    cProblems = db.problems
+    cProblems.insert_one(extraProblem)
+    return
 
 def insertAllProblems(db):
     cProblems = db.problems
