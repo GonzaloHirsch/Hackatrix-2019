@@ -4,14 +4,14 @@
         "title": "Cambio climático",
         "description": "Es la variación del clima de nuestro planeta, el cual siempre tuvo un comportamiento cíclico relativamente lento y en los últimos tiempos se vio abruptamente acelerado a causa del calentamiento global.",
         "causes": [
-            "Efecto invernadero", 
-            "Deforestación", 
-            "Destrucción de ecosistemas marinos", 
+            "Efecto invernadero",
+            "Deforestación",
+            "Destrucción de ecosistemas marinos",
             "Aumento de la población"
         ],
         "consequences": [
-            "Cambios en ecosistemas y desertificación", 
-            "Derretimiento de los polos y subida del nivel del mar", 
+            "Cambios en ecosistemas y desertificación",
+            "Derretimiento de los polos y subida del nivel del mar",
             "Riesgos en la salud humana",
             "Especies en peligro de extinción y migraciones masivas",
             "Fenómenos meteorológicos extremos"
@@ -28,14 +28,14 @@
         "title": "Contaminacion",
         "description": "Es la introducción de objetos, sustancias u otros elementos al medio ambiente.",
         "causes": [
-            "Exceso de vehículos", 
+            "Exceso de vehículos",
             "Exceso de productos plásticos",
             "Plaguicidas en los alimentos",
             "Exceso de residuos",
             "Falta de regulaciones"
         ],
         "consequences": [
-            "Riesgos en la salud humana", 
+            "Riesgos en la salud humana",
             "Especies en peligro de extinción"
         ],
         "howToHelp": [
@@ -50,13 +50,13 @@
         "title": "Deforestación",
         "description": "Es la tala o quema de los bosques de manera accidental o intencionada",
         "causes": [
-            "Fenómenos naturales", 
+            "Fenómenos naturales",
             "Indisponibilidad de tierras",
             "Industria maderera",
             "Incendios forestales"
         ],
         "consequences": [
-            "Especies en peligro de extinción", 
+            "Especies en peligro de extinción",
             "Desertificación de los suelos",
             "Inundaciones",
             "Calentamiento global",
@@ -70,39 +70,16 @@
     },
 
     {
-        "imageUrl": "https://www.nuevatribuna.es/media/nuevatribuna/images/2019/09/01/2019090108291259120.jpg",
-        "title": "Sobreexplotación de los recursos naturales",
-        "description": "Los recursos naturales que nos provee el planeta se están derrochando irresponsablemente, y pronto ya no serán suficientes",
-        "causes": [
-            "Aumento de la población humana", 
-            "Aumento de las actividades humanas y de la demanda", 
-            "Uso inadecuado de los recursos naturales"
-        ],
-        "consequences": [
-            "Destrucción de hábitats naturales y ecosistemas", 
-            "Extinción de especies", 
-
-            "Desertificación de suelos",
-            "Contaminación ambiental",
-            "Calentamiento global y del cambio climático"
-        ],
-        "howToHelp": [
-            "Reducí el consumo de productos que no necesitás",
-            "Consumí productos locales y de temporada, en vez de productos que tengan que venir de otras partes del mundo"
-        ]
-    },
-
-    {
         "imageUrl": "https://www.idencityconsulting.com/wp-content/uploads/2017/10/foto-portada-800x460.png",
         "title": "Escasez de agua",
         "description": "Es la falta de suficientes recursos hídricos para satisfacer las demandas de consumo de agua en una región, y afecta a alrededor de 2800 millones de personas",
         "causes": [
-            "Cambio climático", 
+            "Cambio climático",
             "Uso descontrolado del agua"
         ],
         "consequences": [
-            "Hambre", 
-            "Enfermedades", 
+            "Hambre",
+            "Enfermedades",
             "Especies en extinción",
             "Conflictos"
         ],
@@ -119,14 +96,14 @@
         "title": "Residuos",
         "description": "Es la acumulación en exceso de residuos que afectan al medio ambiente",
         "causes": [
-            "Aumento de la población humana", 
-            "Aumento de las actividades humanas", 
+            "Aumento de la población humana",
+            "Aumento de las actividades humanas",
             "Consumismo",
             "Incapacidad o ineficiencia para reciclar los residuos"
         ],
         "consequences": [
-            "Destrucción de hábitats naturales y ecosistemas", 
-            "Extinción de especies", 
+            "Destrucción de hábitats naturales y ecosistemas",
+            "Extinción de especies",
             "Contaminación ambiental",
             "Riesgo para la salud humana"
         ],
