@@ -6,10 +6,10 @@
       <div class="flex-grow-1"></div>
 
       <v-toolbar-items>
-        <v-btn to="/problemas" text>Problemas</v-btn>
-        <v-btn to="/reciclaje" text>Reciclaje</v-btn>
-        <v-btn to="/tips" text>Tips</v-btn>
-        <v-btn to="/organizaciones" text>Organizaciones</v-btn>
+        <v-btn exact-active-class="tw-text-primary" to="/problemas" text>Problemas</v-btn>
+        <v-btn exact-active-class="tw-text-primary" to="/reciclaje" text>Reciclaje</v-btn>
+        <v-btn exact-active-class="tw-text-primary" to="/tips" text>Tips</v-btn>
+        <v-btn exact-active-class="tw-text-primary" to="/organizaciones" text>Organizaciones</v-btn>
       </v-toolbar-items>
       <!-- <template v-if="$vuetify.breakpoint.smAndUp">
         <v-btn icon>
@@ -27,3 +27,9 @@
     <nuxt />
   </v-app>
 </template>
+
+<style>
+body {
+  padding-bottom: 200px;
+}
+</style>
