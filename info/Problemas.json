@@ -4,14 +4,14 @@
         "title": "Cambio climático",
         "description": "Es la variación del clima de nuestro planeta, el cual siempre tuvo un comportamiento cíclico relativamente lento y en los últimos tiempos se vio abruptamente acelerado a causa del calentamiento global.",
         "causes": [
-            "Efecto invernadero", 
-            "Deforestación", 
-            "Destrucción de ecosistemas marinos", 
+            "Efecto invernadero",
+            "Deforestación",
+            "Destrucción de ecosistemas marinos",
             "Aumento de la población"
         ],
         "consequences": [
-            "Cambios en ecosistemas y desertificación", 
-            "Derretimiento de los polos y subida del nivel del mar", 
+            "Cambios en ecosistemas y desertificación",
+            "Derretimiento de los polos y subida del nivel del mar",
             "Riesgos en la salud humana",
             "Especies en peligro de extinción y migraciones masivas",
             "Fenómenos meteorológicos extremos"
@@ -28,14 +28,14 @@
         "title": "Contaminacion",
         "description": "Es la introducción de objetos, sustancias u otros elementos al medio ambiente.",
         "causes": [
-            "Exceso de vehículos", 
+            "Exceso de vehículos",
             "Exceso de productos plásticos",
             "Plaguicidas en los alimentos",
             "Exceso de residuos",
             "Falta de regulaciones"
         ],
         "consequences": [
-            "Riesgos en la salud humana", 
+            "Riesgos en la salud humana",
             "Especies en peligro de extinción"
         ],
         "howToHelp": [
@@ -50,13 +50,13 @@
         "title": "Deforestación",
         "description": "Es la tala o quema de los bosques de manera accidental o intencionada",
         "causes": [
-            "Fenómenos naturales", 
+            "Fenómenos naturales",
             "Indisponibilidad de tierras",
             "Industria maderera",
             "Incendios forestales"
         ],
         "consequences": [
-            "Especies en peligro de extinción", 
+            "Especies en peligro de extinción",
             "Desertificación de los suelos",
             "Inundaciones",
             "Calentamiento global",

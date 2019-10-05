@@ -36,6 +36,7 @@ module.exports = {
   */
   buildModules: [
     '@nuxtjs/vuetify',
+    '@nuxtjs/tailwindcss'
   ],
   /*
   ** Nuxt.js modules
@@ -50,6 +51,7 @@ module.exports = {
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
+    baseURL: "http://127.0.0.1:5000",
   },
   /*
   ** vuetify module configuration
@@ -58,10 +60,10 @@ module.exports = {
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
     theme: {
-      dark: true,
+      light: true,
       themes: {
-        dark: {
-          primary: colors.blue.darken2,
+        light: {
+          primary: colors.green.darken2,
           accent: colors.grey.darken3,
           secondary: colors.amber.darken3,
           info: colors.teal.lighten1,
@@ -70,6 +72,13 @@ module.exports = {
           success: colors.green.accent3
         }
       }
+    },
+    defaultAssets: {
+      font: true,
+      icons: 'md'
+    },
+    icons: {
+      iconfont: 'md',
     }
   },
   /*
