@@ -90,5 +90,50 @@
             "Reducí el consumo de productos que no necesitás",
             "Consumí productos locales y de temporada, en vez de productos que tengan que venir de otras partes del mundo"
         ]
+    },
+
+    {
+        "imageUrl": "https://www.idencityconsulting.com/wp-content/uploads/2017/10/foto-portada-800x460.png",
+        "title": "Escasez de agua",
+        "description": "Es la falta de suficientes recursos hídricos para satisfacer las demandas de consumo de agua en una región, y afecta a alrededor de 2800 millones de personas",
+        "causes": [
+            "Cambio climático", 
+            "Uso descontrolado del agua"
+        ],
+        "consequences": [
+            "Hambre", 
+            "Enfermedades", 
+            "Especies en extinción",
+            "Conflictos"
+        ],
+        "howToHelp": [
+            "Cerrá las canillas si no las estás usando",
+            "Duchate en 5 minutos",
+            "Cociná tratando de ahorrar agua",
+            "Lavá la ropa en el modo que menos agua use"
+        ]
+    },
+
+    {
+        "imageUrl": "https://t1.ev.ltmcdn.com/es/posts/7/3/5/que_son_los_residuos_solidos_y_como_se_clasifican_1537_600.jpg",
+        "title": "Residuos",
+        "description": "Es la acumulación en exceso de residuos que afectan al medio ambiente",
+        "causes": [
+            "Aumento de la población humana", 
+            "Aumento de las actividades humanas", 
+            "Consumismo",
+            "Incapacidad o ineficiencia para reciclar los residuos"
+        ],
+        "consequences": [
+            "Destrucción de hábitats naturales y ecosistemas", 
+            "Extinción de especies", 
+            "Contaminación ambiental",
+            "Riesgo para la salud humana"
+        ],
+        "howToHelp": [
+            "Reducí el consumo de productos que no necesitás",
+            "Reciclá"
+        ]
     }
+
 ]
