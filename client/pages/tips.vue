@@ -40,12 +40,12 @@
               :key="tip.title"
               :title="tip.title"
               :items="tip.items"
+              :counter="tip.counter"
             ></Tip>
           </v-expansion-panels>
          </v-col>
        </v-row>
     </div>
-
   </v-container>
 </template>
 
@@ -78,6 +78,101 @@
           if (items != null) this.items = items;
         } catch (e) {
           console.error(e);
+          this.items = [
+            {
+              "type": "En el día a día",
+              "tips": [
+                {
+                  "title": "Ahorrá energía",
+                  "counter": 1,
+                  "items": [
+                    "Desenchufá los equipos y aparatos que no están en uso",
+                    "Apagá las luces que no necesites",
+                    "Usá la calefacción solamente si es necesario",
+                    "Colgá la ropa en vez de usar secarropas",
+                    "Tapá las ollas al hervir agua para usar menos gas/electricidad"
+                  ]
+                },
+
+                {
+                  "title": "Ahorrá agua",
+                  "counter": 1,
+                  "items": [
+                    "Cerrá las canillas si no las estás usando",
+                    "Duchate en 5 minutos",
+                    "Cociná tratando de ahorrar agua",
+                    "Lavá la ropa en el modo que menos agua use"
+                  ]
+                },
+
+                {
+                  "title": "Contaminá menos",
+                  "counter": 3,
+                  "items": [
+                    "Reemplazá el auto por transportes más ecológicos como la bicicleta, o de no ser posiblé usá el transporte público",
+                    "Evitá los plásticos innecesarios: usá bandejas reusables, no compres productos con mucho plástico",
+                    "Elegí alimentos orgánicos"
+                  ]
+                },
+
+                {
+                  "title": "Ayuda a ayudar",
+                  "counter": 1,
+                  "items": [
+                    "Corré la voz: alentá a tus conocidos a ayudar también!"
+                  ]
+                }
+
+
+
+              ]
+            },
+
+            {
+              "type": "Para hacer una vez",
+              "tips": [
+                {
+                  "title": "Ahorrá energía",
+                  "counter": 3,
+                  "items": [
+                    "Cambiá tus lámparas por LED",
+                    "Instalá paneles solares",
+                    "Instalá un termotanque solar",
+                    "Elegí electrodomésticos más eficientes"
+                  ]
+                },
+
+                {
+                  "title": "Contaminá menos",
+                  "counter": 5,
+                  "items": [
+                    "Reciclá los envases plásticos y empezá a usar envases de vidrio o metal"
+                  ]
+                }
+              ]
+            },
+
+            {
+              "type": "Para hacer de vez en cuando",
+              "tips": [
+                {
+                  "title": "Desde casa",
+                  "counter": 5,
+                  "items": [
+                    "Buscá cosas que no uses y que se puedan reciclar"
+                  ]
+                },
+
+                {
+                  "title": "Desde donde estés",
+                  "counter": 5,
+                  "items": [
+                    "Doná a alguna organización que ayude al medio ambiente"
+                  ]
+                }
+              ]
+            }
+          ];
         }
       },
       chipFilterAdded(chips) {
