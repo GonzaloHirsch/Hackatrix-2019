@@ -8,15 +8,15 @@
               {{ item.title }}
             </div>
 
-            <h2 v-else class="text-no-bold">
-                {{ item.title }}
-            </h2>
+            <div v-else class="headline">
+              {{ item.title }}
+            </div>
           </v-fade-transition>
         </v-col>
 
         <v-col cols="auto" class="text--secondary">
           <v-fade-transition>
-            <span v-if="!open">
+            <span :class="open ? 'tw-text-white' : ''">
               {{ item.description }}
             </span>
           </v-fade-transition>
