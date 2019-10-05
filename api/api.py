@@ -8,28 +8,27 @@ app.config["MONGO_URI"] = "mongodb://localhost:27017/db"
 mongo = PyMongo(app)
 
 extraProblem = {
-"imageUrl": "https://www.nuevatribuna.es/media/nuevatribuna/images/2019/09/01/2019090108291259120.jpg",
-"title": "Cambio climático",
-"description": "Es la variación del clima de nuestro planeta, el cual siempre tuvo un comportamiento cíclico relativamente lento y en los últimos tiempos se vio abruptamente acelerado a causa del calentamiento global.",
-"causes": [
-"Efecto invernadero",
-"Deforestación",
-"Destrucción de ecosistemas marinos",
-"Aumento de la población"
-],
-"consequences": [
-"Cambios en ecosistemas y desertificación",
-"Derretimiento de los polos y subida del nivel del mar",
-"Riesgos en la salud humana",
-"Especies en peligro de extinción y migraciones masivas",
-"Fenómenos meteorológicos extremos"
-],
-"howToHelp": [
-"Reducí el consumo eléctrico: apagá las luces, desenchufá los aparatos que no estés usando, usá lámparas LED, colgá la ropa en vez de usar secarropas, etc.",
-"Ahorrá agua: duchate en 5 minutos, usá el programa de lavado que use menos agua, etc.",
-"Usá los sistemas de calefacción solo si es necesario"
-]
-}
+        "imageUrl": "https://www.nuevatribuna.es/media/nuevatribuna/images/2019/09/01/2019090108291259120.jpg",
+        "title": "Sobreexplotación de los recursos naturales",
+        "description": "Los recursos naturales que nos provee el planeta se están derrochando irresponsablemente, y pronto ya no serán suficientes",
+        "causes": [
+            "Aumento de la población humana",
+            "Aumento de las actividades humanas y de la demanda",
+            "Uso inadecuado de los recursos naturales"
+        ],
+        "consequences": [
+            "Destrucción de hábitats naturales y ecosistemas",
+            "Extinción de especies",
+
+            "Desertificación de suelos",
+            "Contaminación ambiental",
+            "Calentamiento global y del cambio climático"
+        ],
+        "howToHelp": [
+            "Reducí el consumo de productos que no necesitás",
+            "Consumí productos locales y de temporada, en vez de productos que tengan que venir de otras partes del mundo"
+        ]
+    }
 
 @app.route("/")
 def home_page():
