@@ -73,7 +73,11 @@ module.exports = {
       }
     },
     defaultAssets: {
-      icons: "mdi"
+      font: true,
+      icons: 'md'
+    },
+    icons: {
+      iconfont: 'md',
     }
   },
   /*
