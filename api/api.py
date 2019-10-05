@@ -1,10 +1,12 @@
 from flask import Flask
 from flask_pymongo import PyMongo
+from flask_cors import CORS
 import utils as utils
 import json
 
 # APP config
 app = Flask(__name__)
+CORS(app)
 app.config["MONGO_URI"] = "mongodb://localhost:27017/db"
 mongo = PyMongo(app)
 
@@ -111,22 +113,22 @@ def insertAllMaterials(db):
 def getTipCategories():
     data = mongo.db.tips.find()
     dataArray = utils.cursorToArray(data)
-    return str(dataArray)
+    return json.dumps(dataArray)
 
 #Get the tips by category
 @app.route("/orgs")
 def getOrgs():
     data = mongo.db.orgs.find()
     dataArray = utils.cursorToArray(data)
-    return str(dataArray)
+    return json.dumps(dataArray)
 
 #Get the tips by category
 @app.route("/tips/<type>")
 def getTipByCategory(type):
-    myquery = {"type": category}
+    myquery = {"type": type}
     data = mongo.db.tips.find(myquery)
     dataArray = utils.cursorToArray(data)
-    return str(dataArray)
+    return json.dumps(dataArray)
 
 # Get all the problems
 @app.route("/problems/<id>")
@@ -134,21 +136,21 @@ def getProblemById(id):
     myquery = {"id": self.id}
     data = mongo.db.problems.find(myquery)
     dataArray = utils.cursorToArray(data)
-    return str(dataArray[0])
+    return json.dumps(dataArray[0])
 
 #Get a specific problem by id
 @app.route("/problems")
 def getProblems():
     data = mongo.db.problems.find()
     dataArray = utils.cursorToArray(data)
-    return str(dataArray)
+    return json.dumps(dataArray)
 
 #Get the tips by category
 @app.route("/materials")
 def getMaterials():
     data = mongo.db.materials.find()
     dataArray = utils.cursorToArray(data)
-    return str(dataArray)
+    return json.dumps(dataArray)
 
 # Recycling materials and subcategories
 @app.route("/materials/<category>")
@@ -156,4 +158,4 @@ def getMaterialSubcategory(category):
     myquery = {"category": category}
     data = mongo.db.materials.find(myquery)
     dataArray = utils.cursorToArray(data)
-    return str(dataArray)
+    return json.dumps(dataArray)
