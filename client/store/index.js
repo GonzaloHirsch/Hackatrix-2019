@@ -38,7 +38,7 @@ export const state = () => ({
     problems: [
         {
           id: 1,
-            imageUrl: 'https://www.nuevatribuna.es/media/nuevatribuna/images/2019/09/01/2019090108291259120.jpg',
+            imageUrl: 'https://images.unsplash.com/photo-1565282604648-a13c5f19fd61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80',
           title: 'Cambio climático',
           description: 'Es la variación del clima de nuestro planeta, el cual siempre tuvo un comportamiento cíclico relativamente lento y en los últimos tiempos se vio abruptamente acelerado a causa del calentamiento global.',
           causes: [
