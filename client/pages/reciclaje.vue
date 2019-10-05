@@ -12,45 +12,38 @@
     </header>
 
     <div class="tw-container mx-auto tw-flex tw-justify-center">
-        <div class="recycle-category" v-for="category in categories" :key="category.id" @click="category.showSubcategories = true">
-            <img class="tw-absolute tw-left-0 tw-top-0 tw-w-full tw-h-full tw-object-cover tw-rounded-lg" :src="category.img" style="filter: brightness(0.5);">
-            <div class="tw-z-10">
-                <h1 class="tw-text-xl tw-font-bold tw-uppercase tw-tracking-wide tw-text-white">{{ category.name }}</h1>
-            </div>
-            <!-- <div v-if="category.showSubcategories">
-                <div  v-for="subcategory in category.subcategories" :key="subcategory.id">
-        
-                    <h2>{{ subcategory.name }}</h2>
-                </div>
-            </div> -->
+        <div v-if="!selectedCategory" class="tw-flex">
+            <RecycleCategory v-for="category in categories" :key="category.id" @click.native="selectedCategory = category" :category="category" />
+        </div>
+
+        <div v-if="selectedCategory">
+            {{ selectedCategory.name }}
         </div>
     </div>
   </div>
 </template>
 
 <script>
+import RecycleCategory from "@/components/RecycleCategory";
+
 export default {
+    components: {
+        RecycleCategory
+    },
     data() {
         return {
+            selectedCategory: null,
             categories: [
                 {
+                    id: 1,
                     name: "Cartón",
                     img: "https://images.unsplash.com/photo-1509956563346-93a1179cea68?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
-                    showSubcategories: false,
-                    subcategories: [
-                        {
-                            id: 4,
-                            name: "Cartón Mojado",
-                            img: "https://images.unsplash.com/photo-1564413679915-b0c50085eddb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
-                        },
-                        {
-                            id: 5,
-                            name: "Cartón Seco",
-                            img: "https://5.imimg.com/data5/VI/AA/MY-2196349/corrugated-cardboard-sheet-500x500.jpg"
-                        }
-                    ]
+                    info: {
+                        place: "asdasdasd"
+                    }
                 },
                 {
+                    id: 2,
                     name: "Plástico",
                     img: "https://images.unsplash.com/photo-1530587191325-3db32d826c18?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=667&q=80"
                 }
@@ -61,13 +54,5 @@ export default {
 </script>
 
 <style>
-.recycle-category {
-    @apply tw-h-48 tw-w-48 tw-mx-4 tw-bg-gray-800 tw-flex tw-items-center tw-justify-center tw-overflow-hidden tw-relative tw-rounded-lg tw-cursor-pointer tw-shadow;
-    transition: all 150ms ease;
-}
 
-.recycle-category:hover {
-    @apply tw-shadow-md;
-    transform: translateY(-2px);
-}
 </style>

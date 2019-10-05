@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-toolbar fixed max-height="64">
+    <v-toolbar max-height="64" class="tw-fixed tw-top-0 tw-w-full tw-z-50">
       <v-toolbar-title>MyWorld</v-toolbar-title>
 
       <div class="flex-grow-1"></div>
@@ -30,6 +30,7 @@
 
 <style>
 body {
+  padding-top: 64px;
   padding-bottom: 200px;
 }
 </style>
