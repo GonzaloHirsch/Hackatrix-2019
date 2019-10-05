@@ -74,7 +74,7 @@
     methods: {
       async loadTips() {
         try {
-          let items = JSON.parse(await this.$axios.$get("/tips"));
+          let items = (await this.$axios.$get("/tips"));
           if (items != null) this.items = items;
         } catch (e) {
           console.error(e);

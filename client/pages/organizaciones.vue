@@ -64,7 +64,7 @@
     methods: {
       async loadOrganizations() {
         try {
-          let items = JSON.parse(await this.$axios.$get("/orgs"));
+          let items = (await this.$axios.$get("/orgs"));
           if (items != null) this.items = items;
         } catch (e) {
           console.error(e);
