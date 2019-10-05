@@ -125,7 +125,7 @@ def getOrgs():
 #Get the tips by category
 @app.route("/tips/<type>")
 def getTipByCategory(type):
-    myquery = {"type": type}
+    myquery = {"type": category}
     data = mongo.db.tips.find(myquery)
     dataArray = utils.cursorToArray(data)
     return str(dataArray)

@@ -73,8 +73,12 @@
     },
     methods: {
       async loadTips() {
-        // let items = await this.$axios.$get("/tips");
-        // if (items != null) this.items = items;
+        try {
+          let items = await this.$axios.$get("/tips");
+          if (items != null) this.items = items;
+        } catch (e) {
+          console.error(e);
+        }
       },
       chipFilterAdded(chips) {
         if (chips.length === 0) {
