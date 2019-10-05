@@ -24,7 +24,7 @@ import { mapState } from "vuex";
 
 export default {
     async asyncData({ $axios }) {
-        const problems = $axios.$get("/problems");
+        const problems = await $axios.$get("/problems");
 
         return {
             problems
