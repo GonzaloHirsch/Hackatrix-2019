@@ -13,9 +13,9 @@
 
     <div class="tw-container mx-auto tw-flex tw-justify-center">
         <div class="recycle-category" v-for="category in categories" :key="category.id" @click="category.showSubcategories = true">
-            <img class="tw-absolute tw-left-0 tw-top-0 tw-w-full tw-h-full tw-object-cover" :src="category.img" alt="">
+            <img class="tw-absolute tw-left-0 tw-top-0 tw-w-full tw-h-full tw-object-cover tw-rounded-lg" :src="category.img" style="filter: brightness(0.5);">
             <div class="tw-z-10">
-                <h1 class="tw-text-xl tw-font-bold tw-uppercase tw-tracking-wide">{{ category.name }}</h1>
+                <h1 class="tw-text-xl tw-font-bold tw-uppercase tw-tracking-wide tw-text-white">{{ category.name }}</h1>
             </div>
             <!-- <div v-if="category.showSubcategories">
                 <div  v-for="subcategory in category.subcategories" :key="subcategory.id">
