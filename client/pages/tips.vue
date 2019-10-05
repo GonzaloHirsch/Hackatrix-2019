@@ -62,7 +62,7 @@
       };
     },
     async mounted() {
-      await this.loadOrganizations();
+      await this.loadTips();
       this.filterChips = [];
       for (let item of this.items) {
         this.filterChips.push({
@@ -72,9 +72,9 @@
       }
     },
     methods: {
-      async loadOrganizations() {
-        let items = await this.$axios.$get("/tips");
-        if (items != null) this.items = items;
+      async loadTips() {
+        // let items = await this.$axios.$get("/tips");
+        // if (items != null) this.items = items;
       },
       chipFilterAdded(chips) {
         if (chips.length === 0) {
