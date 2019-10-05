@@ -1,0 +1,120 @@
+[
+    {
+        "category": "Envases, plásticos o latas",
+        "subCategories": [
+            {
+                "category": "Está sucio",
+                "goesTo": "limpiaYrecicla"
+            },
+
+            {
+                "category": "Está limpio",
+                "goesTo": "recicla"
+            }
+        ]
+    },
+
+
+    {
+        "category": "Papel o cartón",
+        "subCategories": [
+            {
+                "category": "Está sucio",
+                "subCategories": [
+                    {
+                        "category": "Se puede limpiar",
+                        "goesTo": "limpiaYrecicla"
+                    },
+        
+                    {
+                        "category": "No se puede limpiar",
+                        "goesTo": "basura"
+                    }
+                ]
+            },
+
+            {
+                "category": "Está limpio",
+                "goesTo": "recicla"
+            }
+        ]
+    },
+
+
+    {
+        "category": "Vidrio",
+        "subCategories": [
+            {
+                "category": "Es algo de esto: bombillas, frascos de medicamentos, gafas, jarrones y tazas, loza, lunas de automóviles, porcelana o cerámica, tapones, chapas, tapas o tubos fluorescentes",
+                "goesTo": "basura"
+            },
+
+            {
+                "category": "Es otra cosa",
+                "subCategories": [
+                    {
+                        "category": "Está sucio",
+                        "goesTo": "limpiaYrecicla"
+                    },
+        
+                    {
+                        "category": "Está limpio",
+                        "goesTo": "recicla"
+                    }
+                ]
+            }
+        ]
+    },
+
+
+    {
+        "category": "Orgánico",
+        "goesTo": "basura"
+    },
+
+
+    {
+        "category": "Electrónico o baterías",
+        "subCategories": [
+            {
+                "category": "Funciona",
+                "goesTo": "vendeOdona"
+            },
+
+            {
+                "category": "No funciona",
+                "subCategories": [
+                    {
+                        "category": "Se puede arreglar",
+                        "goesTo": "arreglarOvender"
+                    },
+        
+                    {
+                        "category": "No se puede arreglar",
+                        "goesTo": "reciclaElectronico"
+                    }
+                ]
+            }
+        ]
+    },
+
+
+    {
+        "category": "Insecticida, jeringa, lata de aceite o aerosol",
+        "goesTo": "recicla"
+    },
+    
+
+    {
+        "category": "Aceite de cocina usado",
+        "goesTo": "recicla"
+    },
+
+
+    {
+        "category": "Medicamentos viejos",
+        "goesTo": "recicla"
+    }
+
+
+]

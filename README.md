@@ -21,3 +21,35 @@ Contiene todas las acciones que se muestran en problemas, para poder ver todo en
 ### organizaciones
 
 Contiene todas las organizaciones que se involucran, con informacion y contacto.
+
+## Flask
+
+Para routear hay que hacer:
+
+  @app.route("/")
+
+Y despues hacer un metodo que devuelva un STRING:
+
+  def home_page():
+      data = mongo.db.info.find()[0]['name']
+      return str(data)
+
+## MongoDB
+
+Accedemos a la instancia de mongo:
+
+  mongo
+
+Accedemos a la base:
+
+  mongo.db
+
+Accedemos a la coleccion:
+
+  mongo.db.info
+
+Accedemos al cursor:
+
+  mongo.db.info.find()
+
+Ese cursor hay que iterarlo y sacarle la data
