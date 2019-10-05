@@ -6,7 +6,7 @@
       <div class="flex-grow-1"></div>
 
       <v-toolbar-items>
-        <v-btn exact-active-class="tw-text-primary" to="/problemas" text>Problemas</v-btn>
+        <v-btn exact-active-class="tw-text-primary" to="/" text>Problemas</v-btn>
         <v-btn exact-active-class="tw-text-primary" to="/reciclaje" text>Reciclaje</v-btn>
         <v-btn exact-active-class="tw-text-primary" to="/tips" text>Tips</v-btn>
         <v-btn exact-active-class="tw-text-primary" to="/organizaciones" text>Organizaciones</v-btn>
