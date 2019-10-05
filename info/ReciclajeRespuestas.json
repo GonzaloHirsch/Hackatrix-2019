@@ -1,0 +1,33 @@
+[
+    {
+        "answer": "limpiaYrecicla",
+        "text": "Muy bien, se puede reciclar! Solo impialo, secalo y separalo para reciclar"
+    },
+
+    {
+        "answer": "recicla",
+        "text": "Felicitaciones, ya está listo para reciclar! Solo separalo para reciclar"
+    },
+
+    {
+        "answer": "basura",
+        "text": "Lamentablemente no se puede reciclar. No te desanimes! Seguro tenés muchas cosas que se pueden reciclar"
+    },
+
+    {
+        "answer": "vendeOdona",
+        "text": "Tu producto puede seguir en uso! Vendelo o donalo para no generar residuos y ayudar a quién lo pueda necesitar!"
+    },
+
+    {
+        "answer": "reciclaElectronico",
+        "text": "Muy bien, tu producto puede ser reciclado! Acercate a tu centro de reciclaje más cercano que acepte dispositivos electrónicos"
+    },
+
+    {
+        "answer": "arreglarOvender",
+        "text": "Tu producto puede seguir con vida! Reparalo, vendelo o donalo para que sea reparado y continue con su ciclo de vida"
+    }
+
+    
+]
