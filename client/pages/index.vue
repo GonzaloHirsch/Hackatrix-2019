@@ -8,8 +8,19 @@
                     <h1 class="tw-break-words tw-font-bold tw-text-2xl tw-uppercase tw-tracking-wide tw-leading-tight tw-mb-6">{{ problem.title }}</h1>
                     <div :class="{ 'tw-hidden': !isSelected(problem) }">
                         <p>{{ problem.description }}</p>
-                        <ul>
-                            <li v-for="(cause, i) in problem.causes" :key="i"><v-icon color="red">error</v-icon> {{ cause }}</li>
+                        <h2 class="subtitle tw-mb-2">Causas</h2>
+                        <ul class="pl-0">
+                            <li v-for="(cause, i) in problem.causes" :key="i"><v-icon color="orange">contact_support</v-icon> {{ cause }}</li>
+                        </ul>
+
+                        <h2 class="subtitle tw-mb-2 tw-mt-4">Consecuencias</h2>
+                        <ul class="pl-0">
+                            <li v-for="(consequence, i) in problem.consequences" :key="i"><v-icon color="red">error</v-icon> {{ consequence }}</li>
+                        </ul>
+
+                        <h2 class="subtitle tw-mb-2 tw-mt-4">¿CÓMO AYUDAR?</h2>
+                        <ul class="pl-0">
+                            <li v-for="(help, i) in problem.howToHelp" :key="i"><v-icon color="primary">check_circle</v-icon> {{ help }}</li>
                         </ul>
                     </div>
                   </div>
@@ -51,5 +62,9 @@ export default {
 <style>
 .problem {
     transition: width 300ms ease;
+}
+
+.subtitle {
+    @apply font-bold text-xl uppercase tracking-wide;
 }
 </style>
