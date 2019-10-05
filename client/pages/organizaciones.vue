@@ -22,6 +22,8 @@
       </v-col>
     </v-row>
 
+    <NoItemsFoundComponent v-if="filteredItems.length === 0"></NoItemsFoundComponent>
+
     <v-row justify="center">
       <v-col md="6" lg="8">
     <v-expansion-panels popout>
@@ -37,11 +39,12 @@
 </template>
 
 <script>
+  import NoItemsFoundComponent from "../components/NoItemsFoundComponent";
   import Organization from "../components/Organization";
 
   export default {
     name: "organizaciones.vue",
-    components: { Organization },
+    components: { NoItemsFoundComponent, Organization },
     data() {
       return {
         items: [],
@@ -59,20 +62,9 @@
       }
     },
     methods: {
-      loadOrganizations() {
-        // setTimeout(() => {
-          this.items = [
-            {
-              title: "Greenpeace",
-              description: "ONG para defender el medioambiente",
-              map_img: "img/organizations/greenpeace_map.png",
-              addresses: ["Zabala 3873, CABA"],
-              phones: ["01143128432"],
-              emails: ["contacto@greenpeace.org.ar"],
-              img: ""
-            }
-          ]
-        // }, 1000);
+      async loadOrganizations() {
+        let items = await this.$axios.$get("/tips");
+        if (items != null) this.items = items;
       }
     }
   }
