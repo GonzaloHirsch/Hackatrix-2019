@@ -11,8 +11,8 @@
                     "Colgá la ropa en vez de usar secarropas",
                     "Tapá las ollas al hervir agua para usar menos gas/electricidad"
                 ]
-            }, 
-            
+            },
+
             {
                 "title": "Ahorrá agua",
                 "items": [
@@ -40,8 +40,9 @@
             }
 
 
-            
-        ]
+
+        ],
+        "counter": 756
     },
 
     {
@@ -55,7 +56,7 @@
                     "Instalá un termotanque solar",
                     "Elegí electrodomésticos más eficientes"
                 ]
-            }, 
+            },
 
             {
                 "title": "Contaminá menos",
@@ -63,7 +64,8 @@
                     "Reciclá los envases plásticos y empezá a usar envases de vidrio o metal"
                 ]
             }
-        ]
+        ],
+        "counter": 532
     },
 
     {
@@ -82,6 +84,7 @@
                     "Doná a alguna organización que ayude al medio ambiente"
                 ]
             }
-        ]
+        ],
+        "counter": 6457
     }
 ]
