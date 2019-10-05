@@ -1,12 +1,14 @@
 <template>
   <v-container fluid>
-    <v-row>
+    <v-row justify="center">
       <v-col cols="auto">
         <div class="pl-6 display-1">
           Organizaciones
         </div>
       </v-col>
     </v-row>
+    <v-row justify="center">
+      <v-col md="6" lg="8">
     <v-expansion-panels popout>
       <Organization
         v-for="item of items"
@@ -14,6 +16,8 @@
         :item="item"
       ></Organization>
     </v-expansion-panels>
+    </v-col>
+    </v-row>
   </v-container>
 </template>
 

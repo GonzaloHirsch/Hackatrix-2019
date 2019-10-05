@@ -1,7 +1,7 @@
 <template>
   <v-expansion-panel>
     <v-expansion-panel-header v-slot="{ open }">
-      <v-row align="center" justify="space-between">
+      <v-row align="center" justify="space-around">
         <v-col cols="auto">
           <v-fade-transition leave-absolute>
             <div v-if="!open" class="title">
@@ -37,7 +37,7 @@
           </v-col>
         </v-row>
         <ul>
-          <li v-for="phone in item.phones">{{phone}}</li>
+          <li v-for="phone in item.phones">- {{phone}}</li>
         </ul>
 
         <v-row class="pt-2" v-if="item.emails.length > 0">
@@ -47,7 +47,7 @@
         </v-row>
         <ul>
           <li v-for="email in item.emails">
-            <a :href="'mailto:' + email">
+            - <a :href="'mailto:' + email">
               {{email}}
             </a>
           </li>
@@ -59,7 +59,7 @@
           </v-col>
         </v-row>
         <ul>
-          <li v-for="address in item.addresses">{{address}}</li>
+          <li v-for="address in item.addresses">- {{address}}</li>
         </ul>
 
         <v-row class="pt-2">
