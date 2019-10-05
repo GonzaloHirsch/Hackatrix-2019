@@ -1,0 +1,34 @@
+[
+    {
+        "title": "Greenpeace",
+        "description": "ONG para atraer la atención pública hacia los problemas globales del medio ambiente e impulsar las soluciones necesarias para tener un futuro verde y en paz.",
+        "map_img": "",
+        "addresses": ["Zabala 3873, CABA"],
+        "url": "greenpeace.org.ar",
+        "phones": ["0810-888-4733"],
+        "emails": ["activismo@infogreenpeace.org.ar", "socios@infogreenpeace.org.ar"],
+        "img": ""
+    },
+
+    {
+        "title": "World Wildlife Fund",
+        "description": "Organización para detener la degradación ambiental del planeta y forjar un futuro en el que los seres humanos vivan en armonía con la naturaleza.",
+        "map_img": "",
+        "addresses": ["Defensa 251, CABA"],
+        "url": "vidasilvestre.org.ar",
+        "phones": ["011 4331-3631"],
+        "emails": [],
+        "img": ""
+    },
+
+    {
+        "title": "Programa de las Naciones Unidas para el Medio Ambiente (PNUMA)",
+        "description": "Portavoz del medio ambiente dentro del sistema de las Naciones Unidas.",
+        "map_img": "",
+        "addresses": ["Av. Córdoba 950, CABA"],
+        "phones": ["+54 11 5555-1414"],
+        "emails": ["onuargentina@unic.org"],
+        "img": ""
+        
+    }
+]

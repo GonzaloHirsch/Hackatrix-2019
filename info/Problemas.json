@@ -67,5 +67,28 @@
             "Elegí productos fabricados por empresas que replantan los árboles de la madera que usan",
             "Reducí emisiones de gases nosivos para el medioambiente"
         ]
+    },
+
+    {
+        "imageUrl": "https://www.nuevatribuna.es/media/nuevatribuna/images/2019/09/01/2019090108291259120.jpg",
+        "title": "Sobreexplotación de los recursos naturales",
+        "description": "Los recursos naturales que nos provee el planeta se están derrochando irresponsablemente, y pronto ya no serán suficientes",
+        "causes": [
+            "Aumento de la población humana", 
+            "Aumento de las actividades humanas y de la demanda", 
+            "Uso inadecuado de los recursos naturales"
+        ],
+        "consequences": [
+            "Destrucción de hábitats naturales y ecosistemas", 
+            "Extinción de especies", 
+
+            "Desertificación de suelos",
+            "Contaminación ambiental",
+            "Calentamiento global y del cambio climático"
+        ],
+        "howToHelp": [
+            "Reducí el consumo de productos que no necesitás",
+            "Consumí productos locales y de temporada, en vez de productos que tengan que venir de otras partes del mundo"
+        ]
     }
 ]
