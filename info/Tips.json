@@ -10,7 +10,8 @@
                     "Usá la calefacción solamente si es necesario",
                     "Colgá la ropa en vez de usar secarropas",
                     "Tapá las ollas al hervir agua para usar menos gas/electricidad"
-                ]
+                ],
+                "counter": 674
             },
 
             {
@@ -20,7 +21,8 @@
                     "Duchate en 5 minutos",
                     "Cociná tratando de ahorrar agua",
                     "Lavá la ropa en el modo que menos agua use"
-                ]
+                ],
+                "counter": 123
             },
 
             {
@@ -29,20 +31,21 @@
                     "Reemplazá el auto por transportes más ecológicos como la bicicleta, o de no ser posiblé usá el transporte público",
                     "Evitá los plásticos innecesarios: usá bandejas reusables, no compres productos con mucho plástico",
                     "Elegí alimentos orgánicos"
-                ]
+                ],
+                "counter": 856
             },
 
             {
                 "title": "Ayuda a ayudar",
                 "items": [
                     "Corré la voz: alentá a tus conocidos a ayudar también!"
-                ]
+                ],
+                "counter": 34
             }
 
 
 
-        ],
-        "counter": 756
+        ]
     },
 
     {
@@ -55,17 +58,18 @@
                     "Instalá paneles solares",
                     "Instalá un termotanque solar",
                     "Elegí electrodomésticos más eficientes"
-                ]
+                ],
+                "counter": 576
             },
 
             {
                 "title": "Contaminá menos",
                 "items": [
                     "Reciclá los envases plásticos y empezá a usar envases de vidrio o metal"
-                ]
+                ],
+                "counter": 235
             }
-        ],
-        "counter": 532
+        ]
     },
 
     {
@@ -75,16 +79,17 @@
                 "title": "Desde casa",
                 "items": [
                     "Buscá cosas que no uses y que se puedan reciclar"
-                ]
+                ],
+                "counter": 745
             },
 
             {
                 "title": "Desde donde estés",
                 "items": [
                     "Doná a alguna organización que ayude al medio ambiente"
-                ]
+                ],
+                "counter": 784
             }
-        ],
-        "counter": 6457
+        ]
     }
 ]
