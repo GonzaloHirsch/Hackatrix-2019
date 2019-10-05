@@ -1,5 +1,12 @@
 <template>
   <v-container fluid>
+    <v-row>
+      <v-col cols="auto">
+        <div class="pl-6 display-1">
+          Organizaciones
+        </div>
+      </v-col>
+    </v-row>
     <v-expansion-panels popout>
       <Organization
         v-for="item of items"
@@ -30,10 +37,11 @@
           this.items = [
             {
               title: "Greenpeace",
-              description: "Activistas para frenar el CC",
-              addresses: [],
-              phones: [],
-              mails: [],
+              description: "ONG para defender el medioambiente",
+              map_img: "img/organizations/greenpeace_map.png",
+              addresses: ["Zabala 3873, CABA"],
+              phones: ["01143128432"],
+              emails: ["contacto@greenpeace.org.ar"],
               img: ""
             }
           ]
