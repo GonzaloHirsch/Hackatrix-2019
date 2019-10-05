@@ -34,13 +34,13 @@
 import { mapState } from "vuex";
 
 export default {
-    // async asyncData({ $axios }) {
-    //     const problems = $axios.$get("/problems");
+     async asyncData({ $axios }) {
+         const problems = await $axios.$get("/problems");
 
-    //     return {
-    //         problems
-    //     }
-    // },
+         return {
+             problems
+         }
+    },
     data() {
         return {
             selectedProblem: null
@@ -52,9 +52,9 @@ export default {
         }
     },
     computed: {
-        ...mapState({
-            problems: state => state.problems
-        })
+        //...mapState({
+        //    problems: state => state.problems
+        //})
     }
 }
 </script>
