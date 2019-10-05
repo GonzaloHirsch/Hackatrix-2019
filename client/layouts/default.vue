@@ -36,5 +36,6 @@ body {
 
 .v-application--wrap {
   font-family: "Poppins", sans-serif !important;
+  background-color: white;
 }
 </style>

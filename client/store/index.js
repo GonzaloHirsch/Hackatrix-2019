@@ -3,13 +3,37 @@ export const state = () => ({
         id: 1,
         name: "Cartón",
         slug: "carton",
-        img: "https://images.unsplash.com/photo-1509956563346-93a1179cea68?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
+        img: "https://images.unsplash.com/photo-1509956563346-93a1179cea68?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
+        img_map: "/img/reciclaje.png",
+        addresses: [
+          "Costa Rica y Malabia",
+          "Echeverria 2201",
+          "Av Medrano 1901",
+          "Av Dorrego 712",
+          "Heredia y Charlone"
+        ],
+        actions: [
+          {
+            id: "m",
+            name: "Mojado",
+            description: "Debe limpiarlo y secarlo para poder ser reciclado",
+            valid: false
+          },
+          {
+            id: "s",
+            name: "Seco",
+            description: "Es posible reciclar el material en su estado actual!",
+            valid: true
+          }
+        ]
     },
     {
         id: 2,
         name: "Plástico",
         slug: "plastico",
-        img: "https://images.unsplash.com/photo-1530587191325-3db32d826c18?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=667&q=80"
+        img: "https://images.unsplash.com/photo-1530587191325-3db32d826c18?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=667&q=80",
+      img_map: "",
+      actions: []
     }],
     problems: [
         {
