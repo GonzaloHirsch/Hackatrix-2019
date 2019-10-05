@@ -8,7 +8,24 @@
       </v-col>
     </v-row>
 
-    <div v-for="item in items" class="pb-8">
+    <v-row justify="center" dense class="pb-8 pl-6 pr-6 mb-n8">
+      <v-col md="6" lg="8">
+        <v-select
+          chips
+          label="Tipo de Tip"
+          multiple
+          solo
+          :items="filterChips"
+          clearable
+          deletable-chips
+          @change="chipFilterAdded"
+          menu-props="offsetY"
+        >
+        </v-select>
+      </v-col>
+    </v-row>
+
+    <div v-for="item in items" class="pb-8" :hidden="item.hidden">
       <v-row justify="center">
         <v-col md="6" lg="8">
           <div class="pl-6 headline">{{ item.type }}</div>
@@ -40,17 +57,26 @@
     components: { Tip },
     data() {
       return {
-        items: []
+        items: [],
+        filterChips: []
       };
     },
-    mounted() {
-      this.loadOrganizations();
+    async mounted() {
+      await this.loadOrganizations();
+      this.filterChips = [];
+      for (let item of this.items) {
+        this.filterChips.push({
+          text: item.type,
+          value: item.type
+        })
+      }
     },
     methods: {
-      loadOrganizations() {
+      async loadOrganizations() {
         // setTimeout(() => {
           this.items = [
             {
+              hidden: false,
               "type": "En el día a día",
               "tips": [
                 {
@@ -96,6 +122,7 @@
             },
 
             {
+              hidden: false,
               "type": "Para hacer una vez",
               "tips": [
                 {
@@ -118,6 +145,7 @@
             },
 
             {
+              hidden: false,
               "type": "Para hacer de vez en cuando",
               "tips": [
                 {
@@ -137,6 +165,22 @@
             }
           ];
         // }, 1000);
+      },
+      chipFilterAdded(chips) {
+        if (chips.length === 0) {
+          for (let item of this.items) {
+            if (item.hidden) item.hidden = false;
+          }
+        } else {
+          for (let item of this.items) {
+            let index = chips.indexOf(item.type);
+            if (index !== -1) {
+              if (item.hidden) item.hidden = false;
+            } else {
+              if (!item.hidden) item.hidden = true;
+            }
+          }
+        }
       }
     }
   }
