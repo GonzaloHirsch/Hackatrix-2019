@@ -1,120 +1,112 @@
 [
     {
-        "category": "Envases, plásticos o latas",
-        "subCategories": [
+        "imageUrl": "",
+        "title": "Envases, plásticos o latas",
+        "cases": [
             {
-                "category": "Está sucio",
-                "goesTo": "limpiaYrecicla"
+                "case": "Esta sucio",
+                "solution": "Muy bien, se puede reciclar! Solo impialo, secalo y separalo para reciclar"
             },
-
             {
-                "category": "Está limpio",
-                "goesTo": "recicla"
+                "case": "Está limpio",
+                "solution": "Felicitaciones, ya está listo para reciclar! Solo separalo para reciclar"
             }
         ]
     },
 
-
     {
-        "category": "Papel o cartón",
-        "subCategories": [
+        "imageUrl": "",
+        "title": "Papel o cartón",
+        "cases": [
             {
-                "category": "Está sucio",
-                "subCategories": [
+                "case": "Esta sucio",
+                "cases2": [
                     {
-                        "category": "Se puede limpiar",
-                        "goesTo": "limpiaYrecicla"
+                        "case": "Se puede limpiar",
+                        "solution": "Muy bien, se puede reciclar! Solo impialo, secalo y separalo para reciclar"
                     },
-        
                     {
-                        "category": "No se puede limpiar",
-                        "goesTo": "basura"
+                        "case": "No se puede limpiar",
+                        "solution": "Lamentablemente no se puede reciclar. No te desanimes! Seguro tenés muchas otras cosas que se pueden reciclar"
                     }
                 ]
             },
-
             {
-                "category": "Está limpio",
-                "goesTo": "recicla"
+                "case": "Está limpio",
+                "solution": "Felicitaciones, ya está listo para reciclar! Solo separalo para reciclar"
             }
         ]
     },
 
-
     {
-        "category": "Vidrio",
-        "subCategories": [
+        "imageUrl": "",
+        "title": "Vidrio",
+        "cases": [
             {
-                "category": "Es algo de esto: bombillas, frascos de medicamentos, gafas, jarrones y tazas, loza, lunas de automóviles, porcelana o cerámica, tapones, chapas, tapas o tubos fluorescentes",
-                "goesTo": "basura"
-            },
-
-            {
-                "category": "Es otra cosa",
-                "subCategories": [
+                "case": "Es otra cosa",
+                "cases2": [
                     {
-                        "category": "Está sucio",
-                        "goesTo": "limpiaYrecicla"
+                        "case": "Está sucio",
+                        "solution": "Muy bien, se puede reciclar! Solo impialo, secalo y separalo para reciclar"
                     },
-        
                     {
-                        "category": "Está limpio",
-                        "goesTo": "recicla"
+                        "case": "Está limpio",
+                        "solution": "Felicitaciones, ya está listo para reciclar! Solo separalo para reciclar"
                     }
                 ]
+            },
+            {
+                "case": "Es algo de esto: bombillas, frascos de medicamentos, gafas, jarrones y tazas, loza, lunas de automóviles, porcelana o cerámica, tapones, chapas, tapas o tubos fluorescentes",
+                "solution": "Lamentablemente no se puede reciclar. No te desanimes! Seguro tenés muchas otras cosas que se pueden reciclar"
             }
         ]
     },
 
-
     {
-        "category": "Orgánico",
-        "goesTo": "basura"
+        "imageUrl": "",
+        "title": "Orgánico",
+        "solution": "Lamentablemente no se puede reciclar. No te desanimes! Seguro tenés muchas otras cosas que se pueden reciclar"
     },
 
-
     {
-        "category": "Electrónico o baterías",
-        "subCategories": [
+        "imageUrl": "",
+        "title": "Electrónico o baterías",
+        "cases": [
             {
-                "category": "Funciona",
-                "goesTo": "vendeOdona"
-            },
-
-            {
-                "category": "No funciona",
-                "subCategories": [
+                "case": "No funciona",
+                "cases2": [
                     {
-                        "category": "Se puede arreglar",
-                        "goesTo": "arreglarOvender"
+                        "case": "Se puede arreglar",
+                        "solution": "Tu producto puede seguir con vida! Reparalo, vendelo o donalo para que sea reparado y continue con su ciclo de vida"
                     },
-        
                     {
-                        "category": "No se puede arreglar",
-                        "goesTo": "reciclaElectronico"
+                        "case": "No se puede arreglar",
+                        "solution": "Muy bien, tu producto puede ser reciclado! Acercate a tu centro de reciclaje más cercano que acepte dispositivos electrónicos"
                     }
                 ]
+            },
+            {
+                "case": "Funciona",
+                "solution": "Tu producto puede seguir en uso! Vendelo o donalo para no generar residuos y ayudar a quién lo pueda necesitar!"
             }
         ]
     },
 
-
     {
-        "category": "Insecticida, jeringa, lata de aceite o aerosol",
-        "goesTo": "recicla"
-    },
-    
-
-    {
-        "category": "Aceite de cocina usado",
-        "goesTo": "recicla"
+        "imageUrl": "",
+        "title": "Insecticida, jeringa, lata de aceite o aerosol",
+        "solution": "Felicitaciones, ya está listo para reciclar! Solo separalo para reciclar"
     },
 
+    {
+        "imageUrl": "",
+        "title": "Aceite de cocina usado",
+        "solution": "Felicitaciones, ya está listo para reciclar! Solo separalo para reciclar"
+    },
 
     {
-        "category": "Medicamentos viejos",
-        "goesTo": "recicla"
+        "imageUrl": "",
+        "title": "Medicamentos viejos",
+        "solution": "Felicitaciones, ya está listo para reciclar! Solo separalo para reciclar"
     }
-
-
 ]
