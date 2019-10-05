@@ -1,21 +1,14 @@
 from flask import Flask
 from flask_pymongo import PyMongo
+from flask_cors import CORS
 import utils as utils
 import json
 
 # APP config
 app = Flask(__name__)
+CORS(app)
 app.config["MONGO_URI"] = "mongodb://localhost:27017/db"
 mongo = PyMongo(app)
-
-@app.route("/")
-def home_page():
-    data 	  = mongo.db.info.find()
-    dataArray = utils.cursorToArray(data)
-    print(dataArray)
-    # return render_template("index.html",
-    #     online_users=online_users)
-    return str(dataArray)
 
 # -------------------- DELETES -------------------
 
@@ -132,7 +125,7 @@ def getOrgs():
 #Get the tips by category
 @app.route("/tips/<type>")
 def getTipByCategory(type):
-    myquery = {"type": category}
+    myquery = {"type": type}
     data = mongo.db.tips.find(myquery)
     dataArray = utils.cursorToArray(data)
     return str(dataArray)
