@@ -6,6 +6,8 @@ app = Flask(__name__)
 app.config["MONGO_URI"] = "mongodb://localhost:27017/db"
 mongo = PyMongo(app)
 
+problems
+
 @app.route("/")
 def home_page():
     data 	  = mongo.db.info.find()
@@ -28,54 +30,37 @@ def delete():
 
     return "done"
 
-@app.route("/insert")
-def insert():
+# -------------------- INSERTS -------------------
 
+@app.route("/insertall")
+def insert():
     # database
     db = mongo.db
-    print("db")
 
-    # Created or Switched to collection names: my_gfg_collection
-    infoCollection = db.info
+    # Hace todos los inserts
+    insertAllProblems(db)
+    insertAllTips(db)
+    insertAllMaterials(db)
+    
+    return ""
 
-    print("col")
-    info1 = {
-            "name":"Mr.Geek",
-            "eid":24,
-            "location":"delhi"
-            }
-    info2 = {
-            "name":"Mr.Shaurya",
-            "eid":14,
-            "location":"delhi"
-            }
+def insertAllProblems(db):
+    cProblems = db.problems
+    for problem in problems:
+        cProblems.insert_one(problem)
+    return
 
-    print("preinsert")
+def insertAllTips(db):
+    cTips = db.tips
+    for tip in tips:
+        cTips.insert_one(tip)
+    return
 
-    # Insert Data
-    info1_id = infoCollection.insert_one(info1)
-    info2_id = infoCollection.insert_one(info2)
-
-    print("insert")
-    return "done"
-
-# Pasa del cursor devuelto por Mongo a un array de diccionarios
-def cursorToArray(cursor):
-    elements = []
-    for item in cursor:
-        print(item)
-        elements.append(cursorItemToDictionary(item))
-    print(elements)
-    return elements
-
-# Pasa del diccionario que devuelve Mongo a otro sin el object ID
-def cursorItemToDictionary(item):
-    dic = {}
-    for key in item.keys():
-        if (key != '_id'):
-            dic[key] = item[key]
-    return dic
-
+def insertAllMaterials(db):
+    cMaterials = db.materials
+    for material in materials:
+        cMaterials.insert_one(material)
+    return
 
 # -------------------- GETTERS -------------------
 
@@ -124,3 +109,22 @@ def getMaterialSubcategory(category):
 	data		= mongo.db.materials.find(myquery)
     dataArray 	= cursorToArray(data)
     return str(dataArray)
+
+# -------------------- UTILS -------------------
+
+# Pasa del cursor devuelto por Mongo a un array de diccionarios
+def cursorToArray(cursor):
+    elements = []
+    for item in cursor:
+        print(item)
+        elements.append(cursorItemToDictionary(item))
+    print(elements)
+    return elements
+
+# Pasa del diccionario que devuelve Mongo a otro sin el object ID
+def cursorItemToDictionary(item):
+    dic = {}
+    for key in item.keys():
+        if (key != '_id'):
+            dic[key] = item[key]
+    return dic
