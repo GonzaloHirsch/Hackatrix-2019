@@ -26,10 +26,10 @@ export default {
     async asyncData({ $axios }) {
         const problems = await $axios.$get("/problems");
 
-        return {
-            problems
-        }
-    },
+    //     return {
+    //         problems
+    //     }
+    // },
     data() {
         return {
             selectedProblem: null
@@ -37,13 +37,13 @@ export default {
     },
     methods: {
         isSelected(problem) {
-            return this.selectedProblem && this.selectedProblem.id == problem.id;
+            return this.selectedProblem && this.selectedProblem.id == problem.id
         }
     },
     computed: {
-        // ...mapState({
-        //     problems: state => state.problems
-        // })
+        ...mapState({
+            problems: state => state.problems
+        })
     }
 }
 </script>
