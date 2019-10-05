@@ -63,7 +63,7 @@
     },
     methods: {
       async loadOrganizations() {
-        let items = await this.$axios.$get("/tips");
+        let items = await this.$axios.$get("/orgs");
         if (items != null) this.items = items;
       }
     }
