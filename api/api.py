@@ -1,12 +1,35 @@
 from flask import Flask
 from flask_pymongo import PyMongo
+import json
 
 # APP config
 app = Flask(__name__)
 app.config["MONGO_URI"] = "mongodb://localhost:27017/db"
 mongo = PyMongo(app)
 
-problems
+extraProblem = {
+"imageUrl": "https://www.nuevatribuna.es/media/nuevatribuna/images/2019/09/01/2019090108291259120.jpg",
+"title": "Cambio climático",
+"description": "Es la variación del clima de nuestro planeta, el cual siempre tuvo un comportamiento cíclico relativamente lento y en los últimos tiempos se vio abruptamente acelerado a causa del calentamiento global.",
+"causes": [
+"Efecto invernadero",
+"Deforestación",
+"Destrucción de ecosistemas marinos",
+"Aumento de la población"
+],
+"consequences": [
+"Cambios en ecosistemas y desertificación",
+"Derretimiento de los polos y subida del nivel del mar",
+"Riesgos en la salud humana",
+"Especies en peligro de extinción y migraciones masivas",
+"Fenómenos meteorológicos extremos"
+],
+"howToHelp": [
+"Reducí el consumo eléctrico: apagá las luces, desenchufá los aparatos que no estés usando, usá lámparas LED, colgá la ropa en vez de usar secarropas, etc.",
+"Ahorrá agua: duchate en 5 minutos, usá el programa de lavado que use menos agua, etc.",
+"Usá los sistemas de calefacción solo si es necesario"
+]
+}
 
 @app.route("/")
 def home_page():
@@ -47,7 +70,7 @@ def deleteAllMaterials(db):
 # -------------------- INSERTS -------------------
 
 @app.route("/insertall")
-def insert():
+def insertall():
     # database
     db = mongo.db
 
@@ -59,7 +82,7 @@ def insert():
     return "done"
 
 @app.route("/insertextra")
-def insert():
+def insertextra():
     # database
     db = mongo.db
 
@@ -74,21 +97,30 @@ def insertExtraProblem(db):
     return
 
 def insertAllProblems(db):
-    cProblems = db.problems
-    for problem in problems:
-        cProblems.insert_one(problem)
+    with open('../info/Problemas.json') as file:
+        print(file)
+        problems = json.load(file)
+        cProblems = db.problems
+        for problem in problems:
+            cProblems.insert_one(problem)
     return
 
 def insertAllTips(db):
-    cTips = db.tips
-    for tip in tips:
-        cTips.insert_one(tip)
+    with open('../info/Tips.json') as file:
+        print(file)
+        tips = json.load(file)
+        cTips = db.tips
+        for tip in tips:
+            cTips.insert_one(tip)
     return
 
 def insertAllMaterials(db):
-    cMaterials = db.materials
-    for material in materials:
-        cMaterials.insert_one(material)
+    with open('../info/Reciclaje.json') as file:
+        print(file)
+        materials = json.load(file)
+        cMaterials = db.materials
+        for material in materials:
+            cMaterials.insert_one(material)
     return
 
 # -------------------- GETTERS -------------------
@@ -96,47 +128,46 @@ def insertAllMaterials(db):
 #Get the tips by category
 @app.route("/tips")
 def getTipCategories():
-	data		= mongo.db.tips.find()
-    dataArray 	= cursorToArray(data)
+    data = mongo.db.tips.find()
+    dataArray = cursorToArray(data)
     return str(dataArray)
-
 
 #Get the tips by category
 @app.route("/tips/<category>")
 def getTipByCategory(category):
-	myquery 	= {"category": category}
-	data		= mongo.db.tips.find(myquery)
-    dataArray 	= cursorToArray(data)
+    myquery = {"category": category}
+    data = mongo.db.tips.find(myquery)
+    dataArray = cursorToArray(data)
     return str(dataArray)
 
 # Get all the problems
 @app.route("/problems/<id>")
 def getProblemById(id):
-	myquery 	= {"id": self.id}
-	database	= mongo.db.problems.find(myquery)
-    dataArray 	= cursorToArray(data)
+    myquery = {"id": self.id}
+    data = mongo.db.problems.find(myquery)
+    dataArray = cursorToArray(data)
     return str(dataArray[0])
 
 #Get a specific problem by id
 @app.route("/problems")
 def getProblems():
-	database	= mongo.db.problems.find()
-    dataArray 	= cursorToArray(data)
+    data = mongo.db.problems.find()
+    dataArray = cursorToArray(data)
     return str(dataArray)
 
 #Get the tips by category
 @app.route("/materials")
 def getMaterials():
-	data		= mongo.db.tips.find()
-    dataArray 	= cursorToArray(data)
+    data = mongo.db.materials.find()
+    dataArray = cursorToArray(data)
     return str(dataArray)
 
 # Recycling materials and subcategories
 @app.route("/materials/<category>")
 def getMaterialSubcategory(category):
-	myquery 	= {"category": category}
-	data		= mongo.db.materials.find(myquery)
-    dataArray 	= cursorToArray(data)
+    myquery = {"category": category}
+    data = mongo.db.materials.find(myquery)
+    dataArray = cursorToArray(data)
     return str(dataArray)
 
 # -------------------- UTILS -------------------
