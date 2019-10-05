@@ -8,7 +8,7 @@ mongo = PyMongo(app)
 
 @app.route("/")
 def home_page():
-    data = mongo.db.info.find()
+    data 	  = mongo.db.info.find()
     dataArray = cursorToArray(data)
     print(dataArray)
     # return render_template("index.html",
@@ -75,3 +75,54 @@ def cursorItemToDictionary(item):
         if (key != '_id'):
             dic[key] = item[key]
     return dic
+
+
+# -------------------- GETTERS -------------------
+
+#Get the tips by category
+@app.route("/tips")
+def getTipCategories():
+	data		= mongo.db.tips.find()
+    dataArray 	= cursorToArray(data)
+    print(dataArray)
+
+
+#Get the tips by category
+@app.route("/tips/<category>")
+def getTipByCategory(category):
+	myquery 	= {"category": category}
+	data		= mongo.db.tips.find(myquery)
+    dataArray 	= cursorToArray(data)
+    print(dataArray)
+
+
+# Get all the problems
+@app.route("/problems/<id>")
+def getProblemById(id):
+	myquery 	= {"id": self.id}
+	database	= mongo.db.problems.find(myquery)
+    dataArray 	= cursorToArray(data)
+    print(dataArray)
+
+#Get a specific problem by id
+@app.route("/problems")
+def getProblems():
+	database	= mongo.db.problems.find()
+    dataArray 	= cursorToArray(data)
+    print(dataArray)
+
+
+#Get the tips by category
+@app.route("/materials")
+def getMaterials():
+	data		= mongo.db.tips.find()
+    dataArray 	= cursorToArray(data)
+    print(dataArray)
+
+# Recycling materials and subcategories
+@app.route("/materials/<category>")
+def getMaterialSubcategory(category):
+	myquery 	= {"category": category}
+	data		= mongo.db.materials.find(myquery)
+    dataArray 	= cursorToArray(data)
+    print(dataArray)
