@@ -1,7 +1,7 @@
 <template>
   <v-container fluid>
     <v-row justify="center">
-      <v-col cols="auto">
+      <v-col md="6" lg="8">
         <div class="pl-6 display-1">
           Organizaciones
         </div>
